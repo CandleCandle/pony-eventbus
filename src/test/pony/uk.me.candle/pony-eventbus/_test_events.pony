@@ -1,4 +1,6 @@
 use "ponytest"
+// use "$groupId/$artifactId"
+use "uk.me.candle/pony-eventbus"
 
 actor _TestEventBus is TestList
 	new create(env: Env) =>
