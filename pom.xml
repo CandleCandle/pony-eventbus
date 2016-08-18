@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>uk.me.candle</groupId>
 	<artifactId>pony-eventbus</artifactId>
-	<version>0.5</version>
+	<version>0.6-SNAPSHOT</version>
 	<packaging>pony</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -11,7 +11,7 @@
 	
 	<scm>
 		<connection>scm:git:file://.</connection>
-	  <tag>pony-eventbus-0.5</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<build>
