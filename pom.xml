@@ -11,15 +11,15 @@
 	
 	<scm>
 		<connection>scm:git:file://.</connection>
-	  <tag>HEAD</tag>
-  </scm>
+		<tag>HEAD</tag>
+	</scm>
 
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>uk.me.candle</groupId>
 				<artifactId>pony-maven-plugin</artifactId>
-				<version>0.3</version>
+				<version>0.4-SNAPSHOT</version>
 				<extensions>true</extensions>
 			</plugin>
 			<plugin>
