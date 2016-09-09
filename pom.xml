@@ -7,6 +7,7 @@
 	<packaging>pony</packaging>
 
 	<name>Pony Eventbus</name>
+	<description>Eventbus implementation for Pony</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
