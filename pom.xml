@@ -8,18 +8,13 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	
-	<scm>
-		<connection>scm:git:file://.</connection>
-		<tag>HEAD</tag>
-	</scm>
 
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>uk.me.candle</groupId>
 				<artifactId>pony-maven-plugin</artifactId>
-				<version>0.4-SNAPSHOT</version>
+				<version>0.5</version>
 				<extensions>true</extensions>
 			</plugin>
 			<plugin>
@@ -35,5 +30,63 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>release</id>
+			<activation><activeByDefault>false</activeByDefault></activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.6</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<scm>
+		<connection>scm:git:git@github.com:CandleCandle/pony-eventbus.git</connection>
+		<developerConnection>scm:git:git@github.com:CandleCandle/pony-eventbus.git</developerConnection>
+		<url>https://github.com/CandleCandle/pony-eventbus</url>
+		<tag>HEAD</tag>
+	</scm>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
+
+	<developers>
+		<developer>
+			<id>candle</id>
+			<name>Andrew Wheat</name>
+		</developer>
+	</developers>
 </project>
 <!-- vim: set sw=4 sts=4 ts=4 noet -->
