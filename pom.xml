@@ -5,9 +5,13 @@
 	<artifactId>pony-eventbus</artifactId>
 	<version>0.6-SNAPSHOT</version>
 	<packaging>pony</packaging>
+
+	<name>Pony Eventbus</name>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
 
 	<build>
 		<plugins>
