@@ -19,7 +19,7 @@
 			<plugin>
 				<groupId>uk.me.candle</groupId>
 				<artifactId>pony-maven-plugin</artifactId>
-				<version>0.5</version>
+				<version>0.6</version>
 				<extensions>true</extensions>
 			</plugin>
 			<plugin>
