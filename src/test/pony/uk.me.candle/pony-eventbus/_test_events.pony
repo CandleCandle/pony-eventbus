@@ -63,7 +63,7 @@ class iso _TestTwoHandlers is UnitTest
 		let collector = TestHandlerCollector.create(h, 2)
 		let handler': Handler[TestEvent val] tag = TestHandler.create(0, collector)
 		let handler'': Handler[TestEvent val] tag = TestHandler.create(1, collector)
-		var bus = EventBus[TestEvent].from_array(recover val [handler', handler''] end)
+		var bus = EventBus[TestEvent].from_array(recover val [handler'; handler''] end)
 		bus.dispatch(TestEvent.create("event"))
 
 class iso _TestFailHandler is UnitTest
@@ -73,7 +73,7 @@ class iso _TestFailHandler is UnitTest
 		let collector = TestHandlerCollector.create(h, 1)
 		let handler: Handler[TestEvent val] tag = TestHandler.create(0, collector)
 		let nonHandler: Handler[TestEvent val] tag = TestFailHandler.create(h)
-		var bus = EventBus[TestEvent].from_array(recover val [nonHandler, handler] end)
+		var bus = EventBus[TestEvent].from_array(recover val [nonHandler; handler] end)
 		bus.dispatch(TestEvent.create("event"))
 
 class iso _TestAppendHandler is UnitTest
